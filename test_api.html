@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API测试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .response {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            min-height: 100px;
+            white-space: pre-wrap;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+            background-color: #f1f1f1;
+            margin-right: 5px;
+        }
+        .tab.active {
+            background-color: white;
+            border-bottom: 2px solid white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .admin-login {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px dashed #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>教学管理系统 API 测试</h1>
+    
+    <div class="tabs">
+        <div class="tab active" onclick="openTab(event, 'register')">注册</div>
+        <div class="tab" onclick="openTab(event, 'login')">登录</div>
+        <div class="tab" onclick="openTab(event, 'logout')">退出登录</div>
+    </div>
+    
+    <div id="register" class="tab-content active">
+        <div class="card">
+            <h2>用户注册</h2>
+            <div class="form-group">
+                <label for="reg-username">用户名</label>
+                <input type="text" id="reg-username" placeholder="请输入用户名">
+            </div>
+            <div class="form-group">
+                <label for="reg-password">密码</label>
+                <input type="password" id="reg-password" placeholder="请输入密码">
+            </div>
+            <div class="form-group">
+                <label for="reg-email">邮箱</label>
+                <input type="email" id="reg-email" placeholder="请输入邮箱">
+            </div>
+            <div class="form-group">
+                <label for="reg-role">角色</label>
+                <select id="reg-role">
+                    <option value="student">学生</option>
+                    <option value="teacher">教师</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="reg-name">真实姓名</label>
+                <input type="text" id="reg-name" placeholder="请输入真实姓名">
+            </div>
+            <button onclick="register()">注册</button>
+            <div class="response" id="register-response"></div>
+        </div>
+    </div>
+    
+    <div id="login" class="tab-content">
+        <div class="card">
+            <h2>用户登录</h2>
+            <div class="form-group">
+                <label for="login-username">用户名</label>
+                <input type="text" id="login-username" placeholder="请输入用户名">
+            </div>
+            <div class="form-group">
+                <label for="login-password">密码</label>
+                <input type="password" id="login-password" placeholder="请输入密码">
+            </div>
+            <button onclick="login()">登录</button>
+            <div class="response" id="login-response"></div>
+            
+            <div class="admin-login">
+                <h3>超级管理员登录</h3>
+                <button onclick="fillAdminLogin()">填充超级管理员信息</button>
+                <p>点击上方按钮填充超级管理员信息，然后点击"登录"按钮进行测试</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="logout" class="tab-content">
+        <div class="card">
+            <h2>退出登录</h2>
+            <div class="form-group">
+                <label for="token">Token</label>
+                <input type="text" id="token" placeholder="请输入登录后获取的token">
+            </div>
+            <button onclick="logout()">退出登录</button>
+            <div class="response" id="logout-response"></div>
+        </div>
+    </div>
+    
+    <script>
+        // API基础URL
+        const BASE_URL = 'http://127.0.0.1:8000/api';
+        
+        // 切换标签页
+        function openTab(evt, tabName) {
+            const tabs = document.getElementsByClassName("tab");
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].className = tabs[i].className.replace(" active", "");
+            }
+            
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].className = tabContents[i].className.replace(" active", "");
+            }
+            
+            document.getElementById(tabName).className += " active";
+            evt.currentTarget.className += " active";
+        }
+        
+        // 填充超级管理员登录信息
+        function fillAdminLogin() {
+            document.getElementById('login-username').value = 'wstier477';
+            document.getElementById('login-password').value = 'wstier477'; // 请替换为您实际设置的密码
+        }
+        
+        // 注册
+        async function register() {
+            const username = document.getElementById('reg-username').value;
+            const password = document.getElementById('reg-password').value;
+            const email = document.getElementById('reg-email').value;
+            const role = document.getElementById('reg-role').value;
+            const name = document.getElementById('reg-name').value;
+            
+            if (!username || !password || !email || !name) {
+                document.getElementById('register-response').textContent = '请填写所有必填字段';
+                return;
+            }
+            
+            const data = {
+                username,
+                password,
+                email,
+                role,
+                name
+            };
+            
+            try {
+                const response = await fetch(`${BASE_URL}/register/`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                document.getElementById('register-response').textContent = JSON.stringify(result, null, 2);
+                
+                // 如果注册成功，自动填充登录表单
+                if (result.code === 200) {
+                    document.getElementById('login-username').value = username;
+                    document.getElementById('login-password').value = password;
+                    // 切换到登录标签页
+                    openTab({currentTarget: document.getElementsByClassName('tab')[1]}, 'login');
+                }
+            } catch (error) {
+                document.getElementById('register-response').textContent = `错误: ${error.message}`;
+            }
+        }
+        
+        // 登录
+        async function login() {
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+            
+            if (!username || !password) {
+                document.getElementById('login-response').textContent = '请填写用户名和密码';
+                return;
+            }
+            
+            const data = {
+                username,
+                password
+            };
+            
+            try {
+                const response = await fetch(`${BASE_URL}/login/`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                document.getElementById('login-response').textContent = JSON.stringify(result, null, 2);
+                
+                // 如果登录成功，自动填充token
+                if (result.code === 200 && result.data && result.data.token) {
+                    document.getElementById('token').value = result.data.token;
+                    // 切换到退出登录标签页
+                    openTab({currentTarget: document.getElementsByClassName('tab')[2]}, 'logout');
+                }
+            } catch (error) {
+                document.getElementById('login-response').textContent = `错误: ${error.message}`;
+            }
+        }
+        
+        // 退出登录
+        async function logout() {
+            const token = document.getElementById('token').value;
+            
+            if (!token) {
+                document.getElementById('logout-response').textContent = '请输入token';
+                return;
+            }
+            
+            try {
+                const response = await fetch(`${BASE_URL}/logout/`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+                
+                const result = await response.json();
+                document.getElementById('logout-response').textContent = JSON.stringify(result, null, 2);
+            } catch (error) {
+                document.getElementById('logout-response').textContent = `错误: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html> 
