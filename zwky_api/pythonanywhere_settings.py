@@ -2,7 +2,7 @@
 PythonAnywhere specific settings for zwky_api project.
 This file contains production settings for deployment on PythonAnywhere.
 """
-
+import os
 from .settings import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
