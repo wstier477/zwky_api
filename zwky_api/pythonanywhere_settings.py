@@ -9,7 +9,7 @@ from .settings import *
 DEBUG = False
 
 # 请替换为您的PythonAnywhere域名
-ALLOWED_HOSTS = ['你的用户名.pythonanywhere.com']
+ALLOWED_HOSTS = ['wstier477.pythonanywhere.com']
 
 # 数据库设置
 # 如果您使用PythonAnywhere的MySQL数据库，请取消注释并配置以下内容

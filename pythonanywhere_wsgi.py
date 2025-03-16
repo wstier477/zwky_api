@@ -8,7 +8,7 @@ import sys
 # 添加项目路径到系统路径
 # 替换 '你的用户名' 为您的PythonAnywhere用户名
 path = '/home/wstier477/zwky_api'
-if path not in sys.path:
+if path not in sys.path:    
     sys.path.append(path)
 
 # 设置Django设置模块  
