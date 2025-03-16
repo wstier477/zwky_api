@@ -7,7 +7,7 @@ cd /home/wstier477/zwky_api
 
 # 激活虚拟环境（虚拟环境可能位置不同，根据实际情况修改）
 
- source /home/wstier477/ENV_DIR/bin/activate
+ ./home/wstier477/ENV_DIR/bin/activate
 
 # 拉取最新代码
 echo "拉取最新代码..."
