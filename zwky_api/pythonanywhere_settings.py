@@ -34,7 +34,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # CORS设置
 CORS_ALLOWED_ORIGINS = [
-    "https://你的前端域名.com",
+    "https://zwky.netlify.app/",
 ]
 CORS_ALLOW_ALL_ORIGINS = False
 
