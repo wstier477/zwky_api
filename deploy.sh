@@ -25,8 +25,6 @@ python manage.py migrate
 # 设置文件权限
 echo "设置文件权限..."
 chmod 664 db.sqlite3
-chmod -R 775 static
-chmod -R 775 media
 mkdir -p logs
 chmod -R 775 logs
 
