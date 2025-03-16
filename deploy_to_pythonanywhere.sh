@@ -4,7 +4,7 @@
 # 设置变量
 USERNAME="wstier477"  # 替换为您的PythonAnywhere用户名
 PROJECT_NAME="zwky_api"
-GITHUB_REPO="https://github.com/wstier477/AAAzwky.git"  # 如果使用GitHub，请替换为您的仓库URL
+GITHUB_REPO="https://github.com/wstier477/zwky_api.git"  # 如果使用GitHub，请替换为您的仓库URL
 
 echo "开始部署 $PROJECT_NAME 到 PythonAnywhere..."
 
