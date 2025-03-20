@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     
     # 自定义应用
     'user_management',
+    'course_management',
+    'class_management',
+    'status_management',
 ]
 
 MIDDLEWARE = [

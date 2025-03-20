@@ -25,3 +25,11 @@ class User(AbstractUser):
     
     def __str__(self):
         return self.username
+
+class Student(models.Model):
+    student_id = models.AutoField(primary_key=True)
+    class_id = models.ForeignKey('class_management.Class', on_delete=models.SET_NULL, null=True, blank=True, related_name='students')
+
+class Teacher(models.Model):
+    teacher_id = models.AutoField(primary_key=True)
+    teacher_title = models.CharField(max_length=45)

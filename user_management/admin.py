@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
+from .models import User, Student, Teacher
 
 User = get_user_model()
 
@@ -16,3 +17,6 @@ class CustomUserAdmin(UserAdmin):
     )
     readonly_fields = ('create_time', 'update_time')
     search_fields = ('username', 'email', 'first_name')
+
+admin.site.register(Student)
+admin.site.register(Teacher)

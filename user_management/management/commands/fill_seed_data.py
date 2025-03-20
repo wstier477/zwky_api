@@ -32,4 +32,16 @@ class Command(BaseCommand):
         Status.objects.create(concentrate=1, sleepy=0, low_head=0, half='No', puzzle=0, if_come=True, student=student1, course_time=coursetime1)
         Status.objects.create(concentrate=0, sleepy=1, low_head=1, half='Yes', puzzle=1, if_come=False, student=student2, course_time=coursetime2)
 
+        # 创建学生课程关联
+        StudentCourse.objects.create(student=student1, course=course1)
+        StudentCourse.objects.create(student=student2, course=course2)
+
+        # 创建班级课程关联
+        ClassCourse.objects.create(class_id=class1, course=course1)
+        ClassCourse.objects.create(class_id=class2, course=course2)
+
+        # 创建教师班级关联
+        TeacherClass.objects.create(class_id=class1, teacher=teacher1)
+        TeacherClass.objects.create(class_id=class2, teacher=teacher2)
+
         self.stdout.write(self.style.SUCCESS('成功填充种子数据')) 
