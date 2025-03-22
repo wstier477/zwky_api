@@ -6,7 +6,7 @@ class Status(models.Model):
     concentrate = models.IntegerField(default=0)
     sleepy = models.IntegerField(default=0)
     low_head = models.IntegerField(default=0)
-    half = models.CharField(max_length=45, blank=True, null=True)
+    half = models.IntegerField(default=0)
     puzzle = models.IntegerField(default=0)
     if_come = models.BooleanField(default=False)
     student = models.ForeignKey('user_management.Student', on_delete=models.SET_NULL, null=True, blank=True, related_name='statuses')
