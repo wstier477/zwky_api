@@ -1,11 +1,10 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate, get_user_model
 from rest_framework.views import APIView
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework import status
-
-from .serializers import UserRegisterSerializer, UserLoginSerializer, UserInfoSerializer
+from .serializers import UserRegisterSerializer, UserLoginSerializer, UserInfoSerializer, UserMessageSerializer
 from .utils import api_response, ErrorCode
 
 User = get_user_model()
@@ -103,3 +102,53 @@ class LogoutView(APIView):
             message="退出成功",
             data=None
         )
+
+class UserMessageView(APIView):
+    """
+    用户消息视图
+    获取用户的所有消息，包括关联的课程和课时状态等信息
+    """
+    permission_classes = [IsAuthenticated]
+    
+    def get(self, request):
+        """获取当前登录用户的所有消息"""
+        user = request.user
+        serializer = UserMessageSerializer(user)
+        
+        return api_response(
+            code=200,
+            message="获取用户消息成功",
+            data=serializer.data
+        )
+    
+    def post(self, request):
+        """根据用户ID获取指定用户的所有消息"""
+        try:
+            user_id = request.data.get('user_id')
+            if not user_id:
+                return api_response(
+                    code=400,
+                    message="用户ID不能为空",
+                    data=None
+                )
+                
+            user = User.objects.get(id=user_id)
+            serializer = UserMessageSerializer(user)
+            
+            return api_response(
+                code=200,
+                message="获取用户消息成功",
+                data=serializer.data
+            )
+        except User.DoesNotExist:
+            return api_response(
+                code=404,
+                message="用户不存在",
+                data=None
+            )
+        except Exception as e:
+            return api_response(
+                code=500,
+                message=f"服务器错误: {str(e)}",
+                data=None
+            )

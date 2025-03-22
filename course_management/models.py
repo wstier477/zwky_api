@@ -11,17 +11,29 @@ class Course(models.Model):
     schedule = models.CharField(max_length=45, blank=True, null=True)
     semester = models.CharField(max_length=45, blank=True, null=True)
     teacher = models.ForeignKey('user_management.Teacher', on_delete=models.SET_NULL, null=True, blank=True, related_name='courses')
+    
+    class Meta:
+        app_label = 'course_management'
 
 class CourseTime(models.Model):
-    begin_time = models.DateTimeField(auto_now_add=True)
-    end_time = models.DateTimeField(auto_now=True)
+    begin_time = models.CharField(max_length=45, blank=True, null=True)
+    end_time = models.CharField(max_length=45, blank=True, null=True)
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='course_times')
-    teacher = models.ForeignKey('user_management.Teacher', on_delete=models.CASCADE, related_name='course_times')
+    teacher = models.ForeignKey('user_management.Teacher', on_delete=models.SET_NULL, null=True, blank=True, related_name='course_times')
+    
+    class Meta:
+        app_label = 'course_management'
 
 class StudentCourse(models.Model):
-    student = models.ForeignKey('user_management.Student', on_delete=models.CASCADE, related_name='student_courses')
+    student = models.ForeignKey('user_management.Student', on_delete=models.SET_NULL, null=True, blank=True, related_name='student_courses')
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='student_courses')
+    
+    class Meta:
+        app_label = 'course_management'
 
 class ClassCourse(models.Model):
     class_id = models.ForeignKey('class_management.Class', on_delete=models.CASCADE, related_name='class_courses')
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='class_courses')
+    
+    class Meta:
+        app_label = 'course_management'
