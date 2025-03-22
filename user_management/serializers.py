@@ -51,32 +51,15 @@ class UserLoginSerializer(serializers.Serializer):
     password = serializers.CharField(required=True, write_only=True)
 
 class UserInfoSerializer(serializers.ModelSerializer):
-    """
-    用户信息序列化器
-    """
-    userId = serializers.CharField(source='staff_id')
-    username = serializers.CharField(source='first_name')
-    role_display = serializers.SerializerMethodField()
-    
-    class Meta:
-        model = User
-        fields = ('id', 'userId', 'username', 'staff_id', 'email', 'phone', 'role', 'role_display', 'avatar', 'date_joined')
-    
-    def get_role_display(self, obj):
-        return obj.get_role_display()
-
-# 添加简单的UserSerializer供其他模块使用
-class UserSerializer(serializers.ModelSerializer):
-    """
-    简化的用户序列化器，供其他模块引用
-    """
+    """用户信息序列化器"""
     name = serializers.CharField(source='first_name')
-    userId = serializers.CharField(source='staff_id', read_only=True)
+    userId = serializers.CharField(source='id')
+    createTime = serializers.DateTimeField(source='create_time', format='%Y-%m-%d %H:%M:%S')
     
     class Meta:
         model = User
-        fields = ('id', 'username', 'name', 'userId', 'role', 'avatar')
-        read_only_fields = ('id', 'role')
+        fields = ('userId', 'username', 'name', 'email', 'phone', 'role', 'avatar', 'createTime')
+        read_only_fields = ('userId', 'username', 'createTime')
 
 # 新增序列化器
 class CourseTimeSerializer(serializers.ModelSerializer):
