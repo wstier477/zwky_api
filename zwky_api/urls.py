@@ -25,6 +25,7 @@ urlpatterns = [
         path('', include('user_management.urls')),
         path('', include('course_management.urls')),
     ])),
+    path('face_recognition/', include('face_recognition.urls')),
 ]
 
 # 添加媒体文件URL配置（仅在开发环境中使用）

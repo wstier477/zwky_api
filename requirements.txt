@@ -10,4 +10,9 @@ numpy==2.2.3
 matplotlib==3.10.1
 pillow==11.1.0
 requests==2.32.3
-jieba==0.42.1 
+jieba==0.42.1
+opencv-python==4.9.0.80
+insightface==0.7.3
+onnxruntime==1.15.1
+onnx==1.14.1
+scikit-learn==1.3.2 

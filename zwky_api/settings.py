@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'course_management',
     'class_management',
     'status_management',
+    'face_recognition',
 ]
 
 MIDDLEWARE = [
@@ -129,11 +130,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# 媒体文件配置
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -194,3 +190,12 @@ CORS_ALLOW_HEADERS = [
     'x-csrftoken',
     'x-requested-with',
 ]
+
+# 人脸识别设置
+FACE_RECOGNITION = {
+    'CUDA_DEVICE_ID': 0,  # 使用的CUDA设备ID，0表示第一个GPU
+    'MODEL_NAME': 'buffalo_sc',  # 使用的模型名称
+    'PROVIDERS': ['CUDAExecutionProvider', 'CPUExecutionProvider'],  # 计算提供者优先级
+    'DET_SIZE': (640, 640),  # 检测尺寸
+    'SIMILARITY_THRESHOLD': 0.5,  # 人脸匹配相似度阈值
+}
