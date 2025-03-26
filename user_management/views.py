@@ -152,38 +152,3 @@ class UserMessageView(APIView):
                 message=f"服务器错误: {str(e)}",
                 data=None
             )
-
-class UserProfileView(APIView):
-    """
-    用户个人资料视图
-    获取和更新当前登录用户的个人资料
-    """
-    permission_classes = [IsAuthenticated]
-    
-    def get(self, request):
-        """获取当前登录用户的个人资料"""
-        user = request.user
-        serializer = UserInfoSerializer(user)
-        return api_response(
-            code=200,
-            message="获取成功",
-            data=serializer.data
-        )
-    
-    def put(self, request):
-        """更新当前登录用户的个人资料"""
-        user = request.user
-        serializer = UserInfoSerializer(user, data=request.data, partial=True)
-        if serializer.is_valid():
-            serializer.save()
-            return api_response(
-                code=200,
-                message="更新成功",
-                data=serializer.data
-            )
-        else:
-            return api_response(
-                code=400,
-                message=str(serializer.errors),
-                data=None
-            )

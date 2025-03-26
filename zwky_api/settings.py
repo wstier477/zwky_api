@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
-import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -165,6 +164,18 @@ SIMPLE_JWT = {
     'USER_ID_CLAIM': 'user_id',
 }
 
+# 人脸识别应用设置
+# 测试模式下不加载真实的人脸识别模型
+FACE_RECOGNITION_TEST_MODE = False
+
+# 人脸识别模型配置
+FACE_RECOGNITION = {
+    'MODEL_NAME': 'buffalo_sc',
+    'PROVIDERS': ['CPUExecutionProvider'],
+    'CUDA_DEVICE_ID': 0,
+    'DET_SIZE': (640, 640),
+}
+
 # CORS设置
 CORS_ALLOW_ALL_ORIGINS = True  # 开发环境下允许所有来源
 # CORS_ALLOWED_ORIGINS = [
@@ -190,12 +201,3 @@ CORS_ALLOW_HEADERS = [
     'x-csrftoken',
     'x-requested-with',
 ]
-
-# 人脸识别设置
-FACE_RECOGNITION = {
-    'CUDA_DEVICE_ID': 0,  # 使用的CUDA设备ID，0表示第一个GPU
-    'MODEL_NAME': 'buffalo_sc',  # 使用的模型名称
-    'PROVIDERS': ['CUDAExecutionProvider', 'CPUExecutionProvider'],  # 计算提供者优先级
-    'DET_SIZE': (640, 640),  # 检测尺寸
-    'SIMILARITY_THRESHOLD': 0.5,  # 人脸匹配相似度阈值
-}

@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, FileResponse
-from django.utils.http import quote
+from django.utils.http import urlquote
 from django.db.models import Q
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
@@ -396,7 +396,7 @@ class ResourceDownloadView(APIView):
             # 尝试直接返回文件
             response = FileResponse(open(file_path, 'rb'))
             response['Content-Type'] = 'application/octet-stream'
-            response['Content-Disposition'] = f'attachment; filename="{quote(resource.name)}"'
+            response['Content-Disposition'] = f'attachment; filename="{urlquote(resource.name)}"'
             return response
         except Exception as e:
             # 如果直接返回失败，返回下载链接
