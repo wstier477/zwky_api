@@ -8,11 +8,6 @@ class FaceRecognitionConfig(AppConfig):
     name = 'face_recognition'
     
     def ready(self):
-        # 暂时跳过初始化人脸分析器，以便启动服务器
-        return
-        
-        # 以下代码被注释掉，等环境配置完成后再取消注释
-        """
         # 避免在管理命令中运行
         if 'runserver' not in sys.argv and 'uwsgi' not in sys.argv and 'gunicorn' not in sys.argv:
             return
@@ -34,4 +29,3 @@ class FaceRecognitionConfig(AppConfig):
         # 将分析器添加到模块全局变量中
         import face_recognition.views
         face_recognition.views.app = self.face_analyzer
-        """
