@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include([
         path('', include('user_management.urls')),
-        # path('', include('course_management.urls')),  # 注释掉不存在的应用
+        path('', include('course_management.urls')),  # 启用课程管理URLs
     ])),
     # 添加人脸识别应用的URL
     path('face_recognition/', include('face_recognition.urls')),

@@ -46,3 +46,24 @@ class ClassCourse(models.Model):
     
     class Meta:
         app_label = 'course_management'
+
+class CourseResource(models.Model):
+    name = models.CharField(max_length=255, verbose_name='资源名称')
+    type = models.CharField(max_length=50, verbose_name='资源类型')
+    description = models.TextField(blank=True, null=True, verbose_name='资源描述')
+    file = models.FileField(upload_to='course_resources/', verbose_name='资源文件')
+    size = models.CharField(max_length=20, verbose_name='文件大小')
+    upload_time = models.DateTimeField(default=timezone.now, verbose_name='上传时间')
+    update_time = models.DateTimeField(auto_now=True, verbose_name='更新时间')
+    download_count = models.IntegerField(default=0, verbose_name='下载次数')
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='resources', verbose_name='所属课程')
+    uploader = models.ForeignKey('user_management.User', on_delete=models.SET_NULL, null=True, related_name='uploaded_resources', verbose_name='上传者')
+
+    class Meta:
+        app_label = 'course_management'
+        verbose_name = '课程资源'
+        verbose_name_plural = verbose_name
+        ordering = ['-upload_time']
+
+    def __str__(self):
+        return f"{self.name} ({self.type})"
