@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # 第三方应用
     'rest_framework',
     'corsheaders',
+    'drf_yasg',  # 添加 Swagger 文档生成器
     
     # 自定义应用
     'user_management',
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     'class_management',
     'status_management',
     'face_recognition',
+    'advanced_features',  # 添加高级功能应用
 ]
 
 MIDDLEWARE = [
@@ -56,7 +58,6 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',  # CORS中间件
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -141,10 +142,11 @@ AUTH_USER_MODEL = 'user_management.User'
 # REST Framework 设置
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',  # 启用JWT认证
     ),
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.IsAuthenticated',  # 启用权限要求
+        # 'rest_framework.permissions.AllowAny',  # 允许任何访问
     ],
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',

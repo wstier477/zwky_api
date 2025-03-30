@@ -12,6 +12,7 @@ from django.core.files.base import ContentFile
 import datetime
 from django.conf import settings
 from .models import Face
+from user_management.utils import api_response  # 导入api_response工具函数
 
 # Create your views here.
 
@@ -22,10 +23,18 @@ app = None
 def insert_face(request):
     """插入单个人脸"""
     if request.method != 'POST':
-        return JsonResponse({"status": "error", "message": "只支持POST请求"})
+        return api_response(
+            code=400,
+            message="只支持POST请求",
+            data=None
+        )
     
     if 'image' not in request.FILES:
-        return JsonResponse({"status": "error", "message": "未提供图像文件"})
+        return api_response(
+            code=400,
+            message="未提供图像文件",
+            data=None
+        )
         
     image_file = request.FILES['image']
     filename = image_file.name
@@ -43,11 +52,14 @@ def insert_face(request):
     # 测试模式或insightface未初始化
     if app is None:
         # 返回模拟成功响应
-        return JsonResponse({
-            "status": "success", 
-            "message": f"测试模式：成功添加{name}的人脸", 
-            "id": face_id
-        })
+        return api_response(
+            code=200, 
+            message=f"测试模式：成功添加{name}的人脸", 
+            data={
+                "id": face_id,
+                "name": name
+            }
+        )
     
     # 真实模式
     try:
@@ -60,16 +72,18 @@ def insert_face(request):
         faces = app.get(img)
         
         if len(faces) == 0:
-            return JsonResponse({
-                "status": "error",
-                "message": "未检测到人脸"
-            })
+            return api_response(
+                code=400,
+                message="未检测到人脸",
+                data=None
+            )
         
         if len(faces) > 1:
-            return JsonResponse({
-                "status": "error",
-                "message": f"检测到多个人脸({len(faces)}个)，请提供单人照片"
-            })
+            return api_response(
+                code=400,
+                message=f"检测到多个人脸({len(faces)}个)，请提供单人照片",
+                data=None
+            )
         
         # 获取人脸特征
         face = faces[0]
@@ -84,52 +98,70 @@ def insert_face(request):
             }
         )
         
-        return JsonResponse({
-            "status": "success",
-            "message": f"成功{'添加' if created else '更新'}{name}的人脸",
-            "id": face_id
-        })
+        return api_response(
+            code=200,
+            message=f"成功{'添加' if created else '更新'}{name}的人脸",
+            data={
+                "id": face_id,
+                "name": name,
+                "created": created
+            }
+        )
         
     except Exception as e:
-        return JsonResponse({
-            "status": "error",
-            "message": f"处理人脸失败: {str(e)}"
-        })
+        return api_response(
+            code=500,
+            message=f"处理人脸失败: {str(e)}",
+            data=None
+        )
 
 @csrf_exempt
 def batch_insert_faces(request):
     """批量插入人脸"""
     if request.method != 'POST':
-        return JsonResponse({"status": "error", "message": "只支持POST请求"})
+        return api_response(
+            code=400,
+            message="只支持POST请求",
+            data=None
+        )
     
     # 测试模式或insightface未初始化
     if app is None:
         # 返回模拟成功响应
-        return JsonResponse({
-            "status": "success",
-            "message": "测试模式：批量插入人脸功能暂未实现",
-            "details": {
+        return api_response(
+            code=200,
+            message="测试模式：批量插入人脸功能暂未实现",
+            data={
                 "success": [],
                 "failed": []
             }
-        })
+        )
     
     # 真实模式实现批量插入（可根据实际需求扩展）
     # ...
 
-    return JsonResponse({
-        "status": "error",
-        "message": "批量插入人脸功能尚未实现"
-    })
+    return api_response(
+        code=501,
+        message="批量插入人脸功能尚未实现",
+        data=None
+    )
 
 @csrf_exempt
 def check_attendance(request):
     """检查考勤"""
     if request.method != 'POST':
-        return JsonResponse({"status": "error", "message": "只支持POST请求"})
+        return api_response(
+            code=400,
+            message="只支持POST请求",
+            data=None
+        )
     
     if 'image' not in request.FILES:
-        return JsonResponse({"status": "error", "message": "未提供图像文件"})
+        return api_response(
+            code=400,
+            message="未提供图像文件",
+            data=None
+        )
     
     # 获取图片文件名
     image_file = request.FILES['image']
@@ -138,11 +170,11 @@ def check_attendance(request):
     # 测试模式或insightface未初始化
     if app is None:
         # 创建模拟考勤记录
-        attendance_records = {
-            "1": {'id': 1, 'name': '张三', 'present': 1},
-            "2": {'id': 2, 'name': '李四', 'present': 0},
-            "3": {'id': 3, 'name': '王五', 'present': 1}
-        }
+        attendance_records = [
+            {'id': 1, 'name': '张三', 'present': 1, 'confidence': 0.85},
+            {'id': 2, 'name': '李四', 'present': 0, 'confidence': 0.45},
+            {'id': 3, 'name': '王五', 'present': 1, 'confidence': 0.92}
+        ]
         
         # 使用当前时间作为考勤文件名
         current_time = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -150,7 +182,7 @@ def check_attendance(request):
         
         # 创建文件内容
         file_content = ""
-        for record in attendance_records.values():
+        for record in attendance_records:
             file_content += f"{record['id']} {record['name']} {record['present']}\n"
         
         # 确保目录存在
@@ -161,15 +193,22 @@ def check_attendance(request):
         path = default_storage.save(f'attendance_records/{filename}', ContentFile(file_content.encode('utf-8')))
         
         # 统计出席和缺席人数
-        present_count = sum(1 for record in attendance_records.values() if record['present'] == 1)
+        present_count = sum(1 for record in attendance_records if record['present'] == 1)
         absent_count = len(attendance_records) - present_count
         
-        return JsonResponse({
-            "status": "success",
-            "message": f"测试模式：已生成考勤记录，出席人数：{present_count}，缺席人数：{absent_count}",
-            "file_path": path,
-            "attendance_records": list(attendance_records.values())
-        })
+        return api_response(
+            code=200,
+            message=f"测试模式：已生成考勤记录，出席人数：{present_count}，缺席人数：{absent_count}",
+            data={
+                "file_path": path,
+                "attendance_records": attendance_records,
+                "stats": {
+                    "total": len(attendance_records),
+                    "present": present_count,
+                    "absent": absent_count
+                }
+            }
+        )
     
     # 真实模式
     try:
@@ -182,18 +221,20 @@ def check_attendance(request):
         faces = app.get(img)
         
         if len(faces) == 0:
-            return JsonResponse({
-                "status": "error",
-                "message": "未检测到人脸"
-            })
+            return api_response(
+                code=400,
+                message="未检测到人脸",
+                data=None
+            )
         
         # 获取所有已知人脸
         known_faces = Face.objects.all()
         if not known_faces:
-            return JsonResponse({
-                "status": "error",
-                "message": "数据库中没有已知人脸数据"
-            })
+            return api_response(
+                code=404,
+                message="数据库中没有已知人脸数据",
+                data=None
+            )
         
         # 构建人脸特征矩阵
         known_feats = []
@@ -256,30 +297,46 @@ def check_attendance(request):
         present_count = sum(1 for record in attendance_records if record['present'] == 1)
         absent_count = len(attendance_records) - present_count
         
-        return JsonResponse({
-            "status": "success",
-            "message": f"已生成考勤记录，检测到{len(faces)}个人脸，识别出{present_count}人",
-            "file_path": path,
-            "attendance_records": attendance_records
-        })
+        return api_response(
+            code=200,
+            message=f"已生成考勤记录，检测到{len(faces)}个人脸，识别出{present_count}人",
+            data={
+                "file_path": path,
+                "attendance_records": attendance_records,
+                "stats": {
+                    "total": len(attendance_records),
+                    "present": present_count,
+                    "absent": absent_count
+                }
+            }
+        )
         
     except Exception as e:
-        return JsonResponse({
-            "status": "error",
-            "message": f"处理失败: {str(e)}"
-        })
+        return api_response(
+            code=500,
+            message=f"处理失败: {str(e)}",
+            data=None
+        )
 
 @csrf_exempt
 def download_attendance_file(request):
     """下载考勤记录文件"""
     if request.method != 'GET':
-        return JsonResponse({"status": "error", "message": "只支持GET请求"})
+        return api_response(
+            code=400,
+            message="只支持GET请求",
+            data=None
+        )
     
     # 获取指定文件名
     filename = request.GET.get('filename', '')
     
     if not filename:
-        return JsonResponse({"status": "error", "message": "未指定文件名"})
+        return api_response(
+            code=400,
+            message="未指定文件名",
+            data=None
+        )
     
     file_path = f'attendance_records/{filename}'
     
@@ -294,6 +351,14 @@ def download_attendance_file(request):
             response['Content-Disposition'] = f'attachment; filename="{filename}"'
             return response
         else:
-            return JsonResponse({"status": "error", "message": "文件不存在"})
+            return api_response(
+                code=404,
+                message="文件不存在",
+                data=None
+            )
     except Exception as e:
-        return JsonResponse({"status": "error", "message": f"下载失败: {str(e)}"})
+        return api_response(
+            code=500,
+            message=f"下载失败: {str(e)}",
+            data=None
+        )
