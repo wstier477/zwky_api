@@ -67,3 +67,33 @@ class CourseResource(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.type})"
+
+class UserAvatar(models.Model):
+    """用户头像模型"""
+    user = models.OneToOneField('user_management.User', on_delete=models.CASCADE, related_name='user_avatar', verbose_name='用户')
+    image = models.ImageField(upload_to='avatars/%Y/%m/', verbose_name='头像图片')
+    upload_time = models.DateTimeField(default=timezone.now, verbose_name='上传时间')
+    update_time = models.DateTimeField(auto_now=True, verbose_name='更新时间')
+
+    class Meta:
+        app_label = 'course_management'
+        verbose_name = '用户头像'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return f"{self.user.username}的头像"
+
+class UserBackground(models.Model):
+    """用户背景图模型"""
+    user = models.OneToOneField('user_management.User', on_delete=models.CASCADE, related_name='user_background', verbose_name='用户')
+    image = models.ImageField(upload_to='backgrounds/%Y/%m/', verbose_name='背景图片')
+    upload_time = models.DateTimeField(default=timezone.now, verbose_name='上传时间')
+    update_time = models.DateTimeField(auto_now=True, verbose_name='更新时间')
+
+    class Meta:
+        app_label = 'course_management'
+        verbose_name = '用户背景图'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return f"{self.user.username}的背景图"

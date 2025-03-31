@@ -13,6 +13,7 @@ import datetime
 from django.conf import settings
 from .models import Face
 from user_management.utils import api_response  # 导入api_response工具函数
+from rest_framework.decorators import api_view
 
 # Create your views here.
 
@@ -20,6 +21,7 @@ from user_management.utils import api_response  # 导入api_response工具函数
 app = None
 
 @csrf_exempt
+@api_view(['POST'])
 def insert_face(request):
     """插入单个人脸"""
     if request.method != 'POST':
@@ -116,6 +118,7 @@ def insert_face(request):
         )
 
 @csrf_exempt
+@api_view(['POST'])
 def batch_insert_faces(request):
     """批量插入人脸"""
     if request.method != 'POST':
@@ -147,6 +150,7 @@ def batch_insert_faces(request):
     )
 
 @csrf_exempt
+@api_view(['POST'])
 def check_attendance(request):
     """检查考勤"""
     if request.method != 'POST':
@@ -319,6 +323,7 @@ def check_attendance(request):
         )
 
 @csrf_exempt
+@api_view(['GET'])
 def download_attendance_file(request):
     """下载考勤记录文件"""
     if request.method != 'GET':

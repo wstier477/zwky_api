@@ -1,0 +1,16 @@
+INFO 2025-04-01 00:09:27,396 autoreload 32304 40148 Watching for file changes with StatReloader
+INFO 2025-04-01 00:09:29,071 middleware 32304 4192 收到请求 - 方法: POST, 路径: /api/user/login/, 用户: 未认证, IP: 127.0.0.1
+INFO 2025-04-01 00:09:29,592 middleware 32304 4192 请求完成 - 路径: /api/user/login/, 状态码: 200, 处理时间: 0.52秒
+INFO 2025-04-01 00:09:29,594 basehttp 32304 4192 "POST //api/user/login/ HTTP/1.1" 200 595
+INFO 2025-04-01 00:09:32,262 middleware 32304 4192 收到请求 - 方法: POST, 路径: /api/user/login, 用户: 未认证, IP: 127.0.0.1
+ERROR 2025-04-01 00:09:32,266 middleware 32304 4192 请求异常 - 路径: /api/user/login, 异常类型: Http404, 异常信息: ”F:\AAA\AAAzwkyy - 副本\zwky_api\api\user\login"不存在
+Traceback (most recent call last):
+  File "F:\AAA\AAAzwkyy\myenv-3.11\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAA\AAAzwkyy\myenv-3.11\Lib\site-packages\django\views\static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: ”F:\AAA\AAAzwkyy - 副本\zwky_api\api\user\login"不存在
+INFO 2025-04-01 00:09:32,277 middleware 32304 4192 请求完成 - 路径: /api/user/login, 状态码: 404, 处理时间: 0.02秒
+WARNING 2025-04-01 00:09:32,277 log 32304 4192 Not Found: /api/user/login
+WARNING 2025-04-01 00:09:32,277 basehttp 32304 4192 "POST //api/user/login HTTP/1.1" 404 6220
