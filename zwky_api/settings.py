@@ -147,8 +147,8 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',  # 启用JWT认证
     ),
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',  # 启用权限要求
-        # 'rest_framework.permissions.AllowAny',  # 允许任何访问
+        # 'rest_framework.permissions.IsAuthenticated',  # 启用权限要求
+        'rest_framework.permissions.AllowAny',  # 允许任何访问
     ],
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
@@ -182,6 +182,7 @@ FACE_RECOGNITION = {
 
 # CORS设置
 CORS_ALLOW_ALL_ORIGINS = True  # 开发环境下允许所有来源
+CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
 # CORS_ALLOWED_ORIGINS = [
 #     "http://localhost:8080",
 #     "http://127.0.0.1:8080",
@@ -204,6 +205,8 @@ CORS_ALLOW_HEADERS = [
     'user-agent',
     'x-csrftoken',
     'x-requested-with',
+    'access-control-request-method',
+    'access-control-request-headers'
 ]
 
 # 日志配置

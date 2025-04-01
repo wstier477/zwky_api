@@ -12,7 +12,7 @@ class RequestLoggingMiddleware(MiddlewareMixin):
         request.start_time = time.time()
         
         # 获取请求体（如果有）
-        if request.body:
+        if request.body and not request.content_type.startswith('multipart/form-data'):
             try:
                 body = json.loads(request.body)
             except json.JSONDecodeError:
@@ -24,6 +24,7 @@ class RequestLoggingMiddleware(MiddlewareMixin):
         logger.info(
             f"收到请求 - 方法: {request.method}, "
             f"路径: {request.path}, "
+            f"Content-Type: {request.content_type}, "
             f"用户: {request.user if request.user.is_authenticated else '未认证'}, "
             f"IP: {request.META.get('REMOTE_ADDR')}"
         )
