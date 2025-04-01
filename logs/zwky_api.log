@@ -2089,3 +2089,4 @@ INFO 2025-04-01 22:52:34,207 autoreload 3988 24580 F:\AAB\AAAzwky\zwky_api\face_
 INFO 2025-04-01 22:52:38,442 autoreload 16616 40592 Watching for file changes with StatReloader
 INFO 2025-04-01 23:07:46,564 autoreload 16616 40592 F:\AAB\AAAzwky\zwky_api\face_recognition\views.py changed, reloading.
 INFO 2025-04-01 23:07:53,075 autoreload 27920 53192 Watching for file changes with StatReloader
+INFO 2025-04-01 23:14:01,849 autoreload 32892 48108 Watching for file changes with StatReloader
