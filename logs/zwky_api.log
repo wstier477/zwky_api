@@ -1,0 +1,53 @@
+INFO 2025-04-01 00:09:27,396 autoreload 32304 40148 Watching for file changes with StatReloader
+INFO 2025-04-01 00:09:29,071 middleware 32304 4192 收到请求 - 方法: POST, 路径: /api/user/login/, 用户: 未认证, IP: 127.0.0.1
+INFO 2025-04-01 00:09:29,592 middleware 32304 4192 请求完成 - 路径: /api/user/login/, 状态码: 200, 处理时间: 0.52秒
+INFO 2025-04-01 00:09:29,594 basehttp 32304 4192 "POST //api/user/login/ HTTP/1.1" 200 595
+INFO 2025-04-01 00:09:32,262 middleware 32304 4192 收到请求 - 方法: POST, 路径: /api/user/login, 用户: 未认证, IP: 127.0.0.1
+ERROR 2025-04-01 00:09:32,266 middleware 32304 4192 请求异常 - 路径: /api/user/login, 异常类型: Http404, 异常信息: ”F:\AAA\AAAzwkyy - 副本\zwky_api\api\user\login"不存在
+Traceback (most recent call last):
+  File "F:\AAA\AAAzwkyy\myenv-3.11\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAA\AAAzwkyy\myenv-3.11\Lib\site-packages\django\views\static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: ”F:\AAA\AAAzwkyy - 副本\zwky_api\api\user\login"不存在
+INFO 2025-04-01 00:09:32,277 middleware 32304 4192 请求完成 - 路径: /api/user/login, 状态码: 404, 处理时间: 0.02秒
+WARNING 2025-04-01 00:09:32,277 log 32304 4192 Not Found: /api/user/login
+WARNING 2025-04-01 00:09:32,277 basehttp 32304 4192 "POST //api/user/login HTTP/1.1" 404 6220
+INFO 2025-04-01 14:13:49,934 autoreload 49932 34284 Watching for file changes with StatReloader
+INFO 2025-04-01 14:13:51,535 middleware 49932 38548 收到请求 - 方法: GET, 路径: /, 用户: 问思祺 (教师), IP: 127.0.0.1
+ERROR 2025-04-01 14:13:51,535 middleware 49932 38548 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAA\AAAzwkyy\myenv-3.11\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAA\AAAzwkyy\myenv-3.11\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+INFO 2025-04-01 14:13:51,541 middleware 49932 38548 请求完成 - 路径: /, 状态码: 404, 处理时间: 0.01秒
+WARNING 2025-04-01 14:13:51,542 log 49932 38548 Not Found: /
+WARNING 2025-04-01 14:13:51,542 basehttp 49932 38548 "GET / HTTP/1.1" 404 3490
+INFO 2025-04-01 14:13:53,788 middleware 49932 38548 收到请求 - 方法: GET, 路径: /admin/, 用户: 问思祺 (教师), IP: 127.0.0.1
+INFO 2025-04-01 14:13:53,824 middleware 49932 38548 请求完成 - 路径: /admin/, 状态码: 200, 处理时间: 0.04秒
+INFO 2025-04-01 14:13:53,824 basehttp 49932 38548 "GET /admin/ HTTP/1.1" 200 22855
+INFO 2025-04-01 14:13:53,837 basehttp 49932 38548 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-04-01 14:13:53,837 basehttp 49932 24804 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-04-01 14:13:53,838 basehttp 49932 26216 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-04-01 14:13:53,843 basehttp 49932 26216 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-04-01 14:13:53,844 basehttp 49932 26216 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-04-01 14:13:53,845 basehttp 49932 24804 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-04-01 14:13:53,847 basehttp 49932 24804 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-04-01 14:13:53,849 basehttp 49932 24804 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-04-01 14:13:53,849 basehttp 49932 26216 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-04-01 14:13:53,854 basehttp 49932 24804 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2025-04-01 14:24:14,871 middleware 49704 46864 收到请求 - 方法: GET, 路径: /api/course/courses/1/students/info/, 用户: 未认证, IP: 127.0.0.1
+INFO 2025-04-01 14:24:14,872 middleware 49704 46864 请求完成 - 路径: /api/course/courses/1/students/info/, 状态码: 403, 处理时间: 0.00秒
+WARNING 2025-04-01 14:24:14,872 log 49704 46864 Forbidden: /api/course/courses/1/students/info/
+INFO 2025-04-01 14:24:15,650 middleware 49704 46864 收到请求 - 方法: GET, 路径: /api/course/courses/1/students/info/, 用户: 未认证, IP: 127.0.0.1
+INFO 2025-04-01 14:24:15,654 middleware 49704 46864 请求完成 - 路径: /api/course/courses/1/students/info/, 状态码: 200, 处理时间: 0.00秒
+INFO 2025-04-01 14:24:16,406 middleware 49704 46864 收到请求 - 方法: GET, 路径: /api/course/courses/9999/students/info/, 用户: 未认证, IP: 127.0.0.1
+INFO 2025-04-01 14:24:16,408 middleware 49704 46864 请求完成 - 路径: /api/course/courses/9999/students/info/, 状态码: 404, 处理时间: 0.00秒
+WARNING 2025-04-01 14:24:16,408 log 49704 46864 Not Found: /api/course/courses/9999/students/info/
+INFO 2025-04-01 14:24:17,160 middleware 49704 46864 收到请求 - 方法: GET, 路径: /api/course/courses/1/students/info/, 用户: 未认证, IP: 127.0.0.1
+INFO 2025-04-01 14:24:17,161 middleware 49704 46864 请求完成 - 路径: /api/course/courses/1/students/info/, 状态码: 401, 处理时间: 0.00秒
+WARNING 2025-04-01 14:24:17,162 log 49704 46864 Unauthorized: /api/course/courses/1/students/info/

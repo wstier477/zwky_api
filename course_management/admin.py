@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Course, CourseTime, StudentCourse, ClassCourse, CourseResource
+from .models import Course, CourseTime, StudentCourse, ClassCourse, CourseResource, UserAvatar, UserBackground
 
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
@@ -29,3 +29,15 @@ class CourseResourceAdmin(admin.ModelAdmin):
     list_filter = ['type', 'upload_time']
     search_fields = ['name', 'description', 'course__title']
     readonly_fields = ['download_count', 'upload_time']
+
+@admin.register(UserAvatar)
+class UserAvatarAdmin(admin.ModelAdmin):
+    list_display = ['user', 'upload_time', 'update_time']
+    search_fields = ['user__username']
+    readonly_fields = ['upload_time', 'update_time']
+
+@admin.register(UserBackground)
+class UserBackgroundAdmin(admin.ModelAdmin):
+    list_display = ['user', 'upload_time', 'update_time']
+    search_fields = ['user__username']
+    readonly_fields = ['upload_time', 'update_time']

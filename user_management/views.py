@@ -10,8 +10,16 @@ from rest_framework import status
 # from django.utils.decorators import method_decorator  # 不再需要装饰器工具
 from .serializers import UserRegisterSerializer, UserLoginSerializer, UserInfoSerializer, UserMessageSerializer
 from .utils import api_response, ErrorCode
+import logging
+from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.response import Response
+from .models import User
 
 User = get_user_model()
+
+# 获取日志记录器
+logger = logging.getLogger('zwky_api')
 
 # 自定义令牌刷新视图
 class CustomTokenRefreshView(TokenRefreshView):
@@ -216,3 +224,63 @@ class UserMessageView(APIView):
                 message=f"服务器错误: {str(e)}",
                 data=None
             )
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserInfoSerializer
+
+    def create(self, request, *args, **kwargs):
+        try:
+            # 记录用户创建操作
+            logger.info(f"开始创建新用户，请求数据: {request.data}")
+            
+            # 使用UserRegisterSerializer进行用户创建
+            serializer = UserRegisterSerializer(data=request.data)
+            serializer.is_valid(raise_exception=True)
+            user = serializer.save()
+            
+            # 使用UserInfoSerializer返回用户信息
+            response_serializer = UserInfoSerializer(user)
+            
+            logger.info(f"用户创建成功 - ID: {user.id}, 用户名: {user.username}")
+            return Response(response_serializer.data, status=status.HTTP_201_CREATED)
+        except Exception as e:
+            logger.error(f"用户创建失败 - 错误信息: {str(e)}", exc_info=True)
+            raise
+
+    @action(detail=True, methods=['post'])
+    def change_password(self, request, pk=None):
+        user = self.get_object()
+        try:
+            # 记录密码修改尝试
+            logger.info(f"用户 {user.username} 开始修改密码")
+            
+            old_password = request.data.get('old_password')
+            new_password = request.data.get('new_password')
+            
+            if not user.check_password(old_password):
+                logger.warning(f"用户 {user.username} 密码修改失败：旧密码验证失败")
+                return Response({"error": "旧密码不正确"}, status=status.HTTP_400_BAD_REQUEST)
+            
+            user.set_password(new_password)
+            user.save()
+            
+            logger.info(f"用户 {user.username} 密码修改成功")
+            return Response({"message": "密码修改成功"})
+        except Exception as e:
+            logger.error(f"用户 {user.username} 密码修改失败 - 错误信息: {str(e)}", exc_info=True)
+            raise
+
+    def destroy(self, request, *args, **kwargs):
+        user = self.get_object()
+        try:
+            # 记录用户删除操作
+            logger.warning(f"准备删除用户 - ID: {user.id}, 用户名: {user.username}")
+            
+            user.delete()
+            
+            logger.info(f"用户删除成功 - ID: {user.id}, 用户名: {user.username}")
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        except Exception as e:
+            logger.error(f"用户删除失败 - ID: {user.id}, 错误信息: {str(e)}", exc_info=True)
+            raise

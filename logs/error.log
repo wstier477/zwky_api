@@ -1,0 +1,16 @@
+ERROR 2025-04-01 00:09:32,266 middleware 32304 4192 请求异常 - 路径: /api/user/login, 异常类型: Http404, 异常信息: ”F:\AAA\AAAzwkyy - 副本\zwky_api\api\user\login"不存在
+Traceback (most recent call last):
+  File "F:\AAA\AAAzwkyy\myenv-3.11\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAA\AAAzwkyy\myenv-3.11\Lib\site-packages\django\views\static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: ”F:\AAA\AAAzwkyy - 副本\zwky_api\api\user\login"不存在
+ERROR 2025-04-01 14:13:51,535 middleware 49932 38548 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAA\AAAzwkyy\myenv-3.11\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAA\AAAzwkyy\myenv-3.11\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
