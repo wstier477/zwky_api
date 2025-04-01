@@ -205,8 +205,11 @@ CORS_ALLOW_HEADERS = [
     'user-agent',
     'x-csrftoken',
     'x-requested-with',
+<<<<<<< HEAD
     'access-control-request-method',
     'access-control-request-headers'
+=======
+>>>>>>> c70743204568b7daca3fb93d4306540ef1dccafd
 ]
 
 # 日志配置
