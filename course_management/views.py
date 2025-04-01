@@ -1,12 +1,14 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, FileResponse
-from django.utils.http import urlquote
+from urllib.parse import quote
 from django.db.models import Q
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.parsers import MultiPartParser, FormParser
 import os
+from rest_framework.response import Response
+from rest_framework import status
 
 from .models import Course, StudentCourse, CourseResource
 from .serializers import CourseListSerializer, CourseDetailSerializer, CourseResourceSerializer, CourseResourceDetailSerializer
@@ -396,7 +398,7 @@ class ResourceDownloadView(APIView):
             # 尝试直接返回文件
             response = FileResponse(open(file_path, 'rb'))
             response['Content-Type'] = 'application/octet-stream'
-            response['Content-Disposition'] = f'attachment; filename="{urlquote(resource.name)}"'
+            response['Content-Disposition'] = f'attachment; filename="{quote(resource.name)}"'
             return response
         except Exception as e:
             # 如果直接返回失败，返回下载链接
@@ -407,3 +409,92 @@ class ResourceDownloadView(APIView):
                     "downloadUrl": request.build_absolute_uri(resource.file.url)
                 }
             )
+
+
+class CourseStudentInfoView(APIView):
+    """
+    获取课程学生信息视图
+    根据课程ID获取学生的详细信息
+    """
+    permission_classes = [IsAuthenticated]
+    
+    def get(self, request, course_id):
+        """获取课程学生的详细信息"""
+        user = request.user
+        
+        # 检查用户权限（只有教师可以查看）
+        if user.role != 'teacher':
+            response = api_response(
+                code=403,
+                message="您没有权限查看此信息",
+                data=None
+            )
+            response.status_code = status.HTTP_403_FORBIDDEN
+            return response
+        
+        # 获取课程对象
+        course = get_object_or_404(Course, course_id=course_id)
+            
+        try:
+            teacher = user.teacher_profile
+            if not teacher or course.teacher != teacher:
+                response = api_response(
+                    code=403,
+                    message="您没有权限查看此信息",
+                    data=None
+                )
+                response.status_code = status.HTTP_403_FORBIDDEN
+                return response
+        except Exception:
+            response = api_response(
+                code=403,
+                message="您没有权限查看此信息",
+                data=None
+            )
+            response.status_code = status.HTTP_403_FORBIDDEN
+            return response
+        
+        # 获取选修该课程的所有学生信息
+        student_courses = StudentCourse.objects.filter(course=course).select_related(
+            'student',
+            'student__user',
+            'student__class_id',
+            'student__user__user_avatar'
+        )
+        
+        # 整理学生信息
+        students_info = []
+        for sc in student_courses:
+            student = sc.student
+            user = student.user
+            class_info = student.class_id
+            
+            # 安全获取头像URL
+            image_url = None
+            try:
+                if hasattr(user, 'user_avatar') and user.user_avatar and user.user_avatar.image:
+                    image_url = request.build_absolute_uri(user.user_avatar.image.url)
+            except Exception:
+                image_url = None
+            
+            student_info = {
+                'student_id': f'S{student.student_id:06d}',  # 格式化为S开头的6位数字
+                'email': user.email,
+                'phone': user.phone,
+                'staff_id': user.staff_id,
+                'image': image_url,
+                'class_name': class_info.class_name if class_info else None,
+                'class_system': class_info.class_system if class_info else None
+            }
+            students_info.append(student_info)
+        
+        response = api_response(
+            code=200,
+            message="获取成功",
+            data={
+                "total": len(students_info),
+                "items": students_info
+            }
+        )
+        response.status_code = status.HTTP_200_OK
+        return response

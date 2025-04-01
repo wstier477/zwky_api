@@ -1,0 +1,408 @@
+ERROR 2025-04-01 00:09:32,266 middleware 32304 4192 请求异常 - 路径: /api/user/login, 异常类型: Http404, 异常信息: ”F:\AAA\AAAzwkyy - 副本\zwky_api\api\user\login"不存在
+Traceback (most recent call last):
+  File "F:\AAA\AAAzwkyy\myenv-3.11\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAA\AAAzwkyy\myenv-3.11\Lib\site-packages\django\views\static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: ”F:\AAA\AAAzwkyy - 副本\zwky_api\api\user\login"不存在
+ERROR 2025-04-01 17:35:54,828 middleware 49212 42096 请求异常 - 路径: /api/token/, 异常类型: Http404, 异常信息: ”F:\AAB\AAAzwky\zwky_api\api\token"不存在
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: ”F:\AAB\AAAzwky\zwky_api\api\token"不存在
+ERROR 2025-04-01 17:36:20,769 middleware 49212 42096 请求异常 - 路径: /api/token/, 异常类型: Http404, 异常信息: ”F:\AAB\AAAzwky\zwky_api\api\token"不存在
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: ”F:\AAB\AAAzwky\zwky_api\api\token"不存在
+ERROR 2025-04-01 17:36:21,132 middleware 49212 42096 请求异常 - 路径: /api/token/, 异常类型: Http404, 异常信息: ”F:\AAB\AAAzwky\zwky_api\api\token"不存在
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: ”F:\AAB\AAAzwky\zwky_api\api\token"不存在
+ERROR 2025-04-01 17:37:37,011 middleware 49212 42096 请求异常 - 路径: /api/token/, 异常类型: Http404, 异常信息: ”F:\AAB\AAAzwky\zwky_api\api\token"不存在
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: ”F:\AAB\AAAzwky\zwky_api\api\token"不存在
+ERROR 2025-04-01 18:13:19,006 log 47520 45396 Internal Server Error: /face_recognition/insert_face/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 143: invalid start byte
+ERROR 2025-04-01 18:13:19,008 basehttp 47520 45396 "POST /face_recognition/insert_face/?no_auth=1 HTTP/1.1" 500 87334
+ERROR 2025-04-01 18:13:31,117 log 47520 49528 Internal Server Error: /face_recognition/insert_face/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 143: invalid start byte
+ERROR 2025-04-01 18:13:31,120 basehttp 47520 49528 "POST /face_recognition/insert_face/?no_auth=1 HTTP/1.1" 500 87334
+ERROR 2025-04-01 18:16:16,007 middleware 47520 43776 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-04-01 18:16:30,717 log 47520 38796 Internal Server Error: /face_recognition/check_attendance/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 146: invalid start byte
+ERROR 2025-04-01 18:16:30,718 basehttp 47520 38796 "POST /face_recognition/check_attendance/ HTTP/1.1" 500 86836
+ERROR 2025-04-01 18:16:30,799 log 47520 43776 Internal Server Error: /face_recognition/check_attendance/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 146: invalid start byte
+ERROR 2025-04-01 18:16:30,801 basehttp 47520 43776 "POST /face_recognition/check_attendance/?no_auth=1 HTTP/1.1" 500 87063
+ERROR 2025-04-01 18:16:30,873 log 47520 43776 Internal Server Error: /face_recognition/check_attendance/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 146: invalid start byte
+ERROR 2025-04-01 18:16:30,873 basehttp 47520 43776 "POST /face_recognition/check_attendance/ HTTP/1.1" 500 86691
+ERROR 2025-04-01 18:16:38,937 log 47520 39276 Internal Server Error: /face_recognition/insert_face/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 143: invalid start byte
+ERROR 2025-04-01 18:16:38,938 basehttp 47520 39276 "POST /face_recognition/insert_face/ HTTP/1.1" 500 86962
+ERROR 2025-04-01 18:16:38,964 log 47520 43776 Internal Server Error: /face_recognition/insert_face/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 143: invalid start byte
+ERROR 2025-04-01 18:16:38,965 basehttp 47520 43776 "POST /face_recognition/insert_face/?no_auth=1 HTTP/1.1" 500 87189
+ERROR 2025-04-01 18:16:38,991 log 47520 43776 Internal Server Error: /face_recognition/insert_face/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 143: invalid start byte
+ERROR 2025-04-01 18:16:38,994 basehttp 47520 43776 "POST /face_recognition/insert_face/ HTTP/1.1" 500 86817
+ERROR 2025-04-01 18:18:01,627 middleware 47520 43776 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-04-01 18:18:02,300 middleware 47520 43776 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-04-01 18:18:03,685 log 47520 20572 Internal Server Error: /face_recognition/insert_face/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 143: invalid start byte
+ERROR 2025-04-01 18:18:03,686 basehttp 47520 20572 "POST /face_recognition/insert_face/ HTTP/1.1" 500 86962
+ERROR 2025-04-01 18:18:03,717 log 47520 43776 Internal Server Error: /face_recognition/insert_face/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 143: invalid start byte
+ERROR 2025-04-01 18:18:03,719 basehttp 47520 43776 "POST /face_recognition/insert_face/?no_auth=1 HTTP/1.1" 500 87189
+ERROR 2025-04-01 18:18:03,752 log 47520 43776 Internal Server Error: /face_recognition/insert_face/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 143: invalid start byte
+ERROR 2025-04-01 18:18:03,753 basehttp 47520 43776 "POST /face_recognition/insert_face/ HTTP/1.1" 500 86817
+ERROR 2025-04-01 18:18:04,903 log 47520 50232 Internal Server Error: /face_recognition/check_attendance/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 146: invalid start byte
+ERROR 2025-04-01 18:18:04,905 basehttp 47520 50232 "POST /face_recognition/check_attendance/ HTTP/1.1" 500 86836
+ERROR 2025-04-01 18:18:05,005 log 47520 43776 Internal Server Error: /face_recognition/check_attendance/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 146: invalid start byte
+ERROR 2025-04-01 18:18:05,006 basehttp 47520 43776 "POST /face_recognition/check_attendance/?no_auth=1 HTTP/1.1" 500 87063
+ERROR 2025-04-01 18:18:05,152 log 47520 43776 Internal Server Error: /face_recognition/check_attendance/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 146: invalid start byte
+ERROR 2025-04-01 18:18:05,154 basehttp 47520 43776 "POST /face_recognition/check_attendance/ HTTP/1.1" 500 86691
+ERROR 2025-04-01 18:18:13,172 middleware 47520 43776 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-04-01 18:19:04,290 middleware 47520 43776 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-04-01 18:20:52,657 middleware 47520 36212 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-04-01 18:21:10,179 log 47520 36212 Internal Server Error: /face_recognition/insert_face/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 161: invalid start byte
+ERROR 2025-04-01 18:21:10,180 basehttp 47520 36212 "POST /face_recognition/insert_face/?skip_middleware=true&format=multipart HTTP/1.1" 500 87712
+ERROR 2025-04-01 18:21:17,576 log 47520 36212 Internal Server Error: /face_recognition/insert_face/
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\zwky_api\zwky_api\middleware.py", line 17, in process_request
+    body = json.loads(request.body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 143: invalid start byte
+ERROR 2025-04-01 18:21:17,577 basehttp 47520 36212 "POST /face_recognition/insert_face/?skip_middleware=true&format=multipart HTTP/1.1" 500 87671
+ERROR 2025-04-01 18:23:22,809 middleware 45588 44748 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-04-01 18:25:38,740 middleware 50624 29820 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-04-01 18:28:03,174 middleware 50624 29820 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-04-01 18:28:12,109 middleware 50624 45208 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-04-01 18:28:24,492 middleware 50624 29820 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-04-01 18:40:54,507 middleware 35532 29868 请求异常 - 路径: /face_recognition_test.html, 异常类型: Http404, 异常信息: ”F:\AAB\AAAzwky\zwky_api\face_recognition_test.html"不存在
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: ”F:\AAB\AAAzwky\zwky_api\face_recognition_test.html"不存在
+ERROR 2025-04-01 18:43:26,853 middleware 35532 40168 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-04-01 18:46:38,842 middleware 35532 36648 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
