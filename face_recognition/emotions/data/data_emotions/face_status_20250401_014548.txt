@@ -1,0 +1,17 @@
+2025-04-01 01:45:50.127938 - student_id=000 |name: ÌÀÑà | Status: Focused 
+2025-04-01 01:45:51.214197 - student_id=000 |name: ÌÀÑà | Status: Distracted 
+2025-04-01 01:45:52.240169 - student_id=000 |name: ÌÀÑà | Status: Distracted 
+2025-04-01 01:45:53.329200 - student_id=000 |name: unknown | Status: Distracted 
+2025-04-01 01:45:54.429619 - student_id=000 |name: ÌÀÑà | Status: Distracted 
+2025-04-01 01:45:55.497134 - student_id=000 |name: ÌÀÑà | Status: Distracted 
+2025-04-01 01:45:56.579401 - student_id=000 |name: ÌÀÑà | Status: Distracted 
+2025-04-01 01:45:57.638028 - student_id=000 |name: ÎÊË¼ì÷ | Status: Distracted 
+2025-04-01 01:45:58.662906 - student_id=000 |name: ÌÀÑà | Status: Distracted 
+2025-04-01 01:45:59.725213 - student_id=000 |name: ÎÊË¼ì÷ | Status: Distracted 
+2025-04-01 01:46:00.798895 - student_id=000 |name: ÎÊË¼ì÷ | Status: Distracted 
+2025-04-01 01:46:01.959067 - student_id=000 |name: ÌÀÑà | Status: Distracted 
+2025-04-01 01:46:03.019334 - student_id=000 |name: ÎÊË¼ì÷ | Status: Distracted 
+2025-04-01 01:46:04.128880 - student_id=000 |name: ÎÊË¼ì÷ | Status: Distracted 
+2025-04-01 01:46:05.236075 - student_id=000 |name: ÎÊË¼ì÷ | Status: Distracted 
+2025-04-01 01:46:06.321527 - student_id=000 |name: ÌÀÑà | Status: Distracted 
+2025-04-01 01:46:07.411590 - student_id=000 |name: ÌÀÑà | Status: Distracted 

@@ -1,0 +1,17 @@
+2025-04-01 14:47:51.289 - ID: 0 | Name: unknown | Status: Focused
+2025-04-01 14:47:51.316 - ID: 1 | Name: Ã¿—‡ | Status: Focused
+2025-04-01 14:47:51.342 - ID: 2 | Name: unknown | Status: Focused
+2025-04-01 14:47:52.368 - ID: 0 | Name: unknown | Status: Distracted
+2025-04-01 14:47:52.397 - ID: 1 | Name: unknown | Status: Distracted
+2025-04-01 14:47:52.424 - ID: 2 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 14:47:53.463 - ID: 0 | Name: unknown | Status: Distracted
+2025-04-01 14:47:53.489 - ID: 1 | Name: unknown | Status: Distracted
+2025-04-01 14:47:53.534 - ID: 2 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 14:47:54.508 - ID: 0 | Name: unknown | Status: Distracted
+2025-04-01 14:47:54.547 - ID: 1 | Name: unknown | Status: Distracted
+2025-04-01 14:47:54.573 - ID: 2 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 14:47:55.519 - ID: 0 | Name: unknown | Status: Distracted
+2025-04-01 14:47:55.564 - ID: 1 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 14:47:55.892 - ID: 2 | Name: unknown | Status: No Face Detected
+2025-04-01 14:47:56.559 - ID: 0 | Name: unknown | Status: Distracted
+2025-04-01 14:47:56.590 - ID: 1 | Name: Ã¿—‡ | Status: Distracted

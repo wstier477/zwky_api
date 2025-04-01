@@ -1,0 +1,207 @@
+2025-04-01 01:50:47.608 - ID: 457_357_516_437 | Name: Œ ÀºÏ˜ | Status: Focused
+2025-04-01 01:50:47.631 - ID: 221_170_374_374 | Name: Ã¿—‡ | Status: Focused
+2025-04-01 01:50:47.885 - ID: 458_356_518_436 | Name: Œ ÀºÏ˜ | Status: Focused
+2025-04-01 01:50:47.915 - ID: 223_169_374_377 | Name: Ã¿—‡ | Status: Focused
+2025-04-01 01:50:48.106 - ID: 457_356_517_437 | Name: Œ ÀºÏ˜ | Status: Focused
+2025-04-01 01:50:48.133 - ID: 222_168_373_377 | Name: Ã¿—‡ | Status: Focused
+2025-04-01 01:50:48.236 - ID: 458_357_519_436 | Name: Œ ÀºÏ˜ | Status: Focused
+2025-04-01 01:50:48.262 - ID: 222_169_373_377 | Name: Ã¿—‡ | Status: Focused
+2025-04-01 01:50:48.423 - ID: 460_357_520_436 | Name: Œ ÀºÏ˜ | Status: Focused
+2025-04-01 01:50:48.576 - ID: 460_358_520_436 | Name: Œ ÀºÏ˜ | Status: Focused
+2025-04-01 01:50:48.722 - ID: 459_357_518_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:48.760 - ID: 223_170_374_377 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:48.912 - ID: 458_357_518_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:48.949 - ID: 222_170_374_377 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:49.058 - ID: 458_357_517_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:49.086 - ID: 221_169_374_378 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:49.223 - ID: 221_169_374_377 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:49.361 - ID: 458_356_517_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:49.386 - ID: 222_169_374_378 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:49.566 - ID: 222_169_373_378 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:49.743 - ID: 458_356_516_435 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:49.773 - ID: 221_169_373_379 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:49.901 - ID: 458_357_517_435 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:49.929 - ID: 221_170_373_378 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:50.051 - ID: 458_355_516_435 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:50.079 - ID: 222_171_373_378 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:50.181 - ID: 458_356_516_434 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:50.204 - ID: 221_170_372_379 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:50.350 - ID: 221_171_372_379 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:50.492 - ID: 457_356_515_433 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:50.518 - ID: 222_169_372_379 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:50.796 - ID: 458_356_516_433 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:50.825 - ID: 221_170_373_379 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:50.999 - ID: 458_355_516_433 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:51.027 - ID: 221_170_373_380 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:51.152 - ID: 457_356_516_433 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:51.174 - ID: 221_170_372_381 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:51.311 - ID: 220_169_372_380 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:51.538 - ID: 221_169_372_379 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:51.646 - ID: 457_356_516_434 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:51.671 - ID: 220_170_372_378 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:51.809 - ID: 220_169_369_380 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:51.979 - ID: 457_357_515_434 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:52.008 - ID: 219_171_370_378 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:52.187 - ID: 219_172_371_378 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:52.300 - ID: 457_357_516_435 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:52.335 - ID: 220_169_369_379 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:52.612 - ID: 219_168_368_379 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:52.757 - ID: 456_357_516_435 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:52.784 - ID: 219_168_369_379 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:52.897 - ID: 458_356_517_435 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:52.935 - ID: 220_168_368_378 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:53.186 - ID: 459_357_517_435 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:53.211 - ID: 218_170_370_376 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:50:53.360 - ID: 219_168_369_380 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:53.478 - ID: 458_357_517_435 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:53.508 - ID: 220_169_368_380 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:53.664 - ID: 219_169_370_380 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:53.798 - ID: 219_170_370_378 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:53.941 - ID: 218_170_370_379 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:54.052 - ID: 458_356_517_435 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:54.079 - ID: 217_170_368_380 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:54.204 - ID: 458_356_516_435 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:54.227 - ID: 217_171_370_378 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:54.379 - ID: 219_171_370_377 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:54.486 - ID: 458_357_517_435 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:54.661 - ID: 216_171_370_378 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:54.778 - ID: 456_357_515_435 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:54.820 - ID: 217_171_369_379 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:54.949 - ID: 457_357_515_435 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:54.979 - ID: 217_172_370_380 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:55.087 - ID: 458_357_516_435 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:55.115 - ID: 217_172_370_378 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:55.243 - ID: 458_357_517_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:55.272 - ID: 217_172_370_374 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:55.381 - ID: 458_356_517_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:55.407 - ID: 219_173_369_371 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:55.547 - ID: 217_171_369_380 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:55.668 - ID: 459_357_517_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:55.693 - ID: 217_170_369_380 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:55.847 - ID: 218_169_370_381 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:50:56.058 - ID: 219_170_368_382 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:50:56.186 - ID: 459_358_518_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:56.211 - ID: 218_171_369_377 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:56.339 - ID: 460_357_520_437 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:56.380 - ID: 218_173_368_373 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:56.504 - ID: 461_357_519_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:56.538 - ID: 218_171_367_367 | Name: unknown | Status: Distracted
+2025-04-01 01:50:56.655 - ID: 461_357_520_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:56.680 - ID: 218_174_367_367 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:56.801 - ID: 218_172_369_376 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:56.944 - ID: 462_358_521_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:56.982 - ID: 218_172_368_372 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:57.117 - ID: 462_357_521_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:57.308 - ID: 219_174_368_369 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:57.459 - ID: 461_358_521_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:57.489 - ID: 217_172_369_377 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:57.634 - ID: 461_358_520_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:57.663 - ID: 217_171_369_378 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:57.833 - ID: 461_357_520_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:57.859 - ID: 218_174_370_376 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:57.980 - ID: 461_358_519_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:58.004 - ID: 217_172_370_382 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:58.136 - ID: 217_172_370_380 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:58.287 - ID: 460_357_519_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:58.310 - ID: 217_171_370_379 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:58.419 - ID: 460_357_518_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:58.442 - ID: 216_171_368_377 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:58.665 - ID: 215_171_368_380 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:58.812 - ID: 217_170_367_376 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:58.990 - ID: 216_172_369_378 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:59.098 - ID: 460_357_518_437 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:59.128 - ID: 216_171_369_377 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:59.278 - ID: 217_172_368_377 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:59.428 - ID: 461_357_519_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:59.454 - ID: 216_172_368_379 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:59.595 - ID: 461_358_519_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:59.619 - ID: 217_172_369_377 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:50:59.792 - ID: 460_357_519_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:50:59.820 - ID: 216_171_368_380 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:00.028 - ID: 464_359_523_435 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:51:00.053 - ID: 207_171_356_371 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:00.190 - ID: 464_361_522_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:51:00.217 - ID: 200_170_347_380 | Name: Ã¿—‡ | Status: Turning RIGHT
+2025-04-01 01:51:00.330 - ID: 461_359_522_437 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:51:00.356 - ID: 203_171_351_376 | Name: Ã¿—‡ | Status: Turning RIGHT
+2025-04-01 01:51:00.483 - ID: 462_361_521_438 | Name: Œ ÀºÏ˜ | Status: Turning RIGHT
+2025-04-01 01:51:00.507 - ID: 210_170_362_375 | Name: Ã¿—‡ | Status: Turning RIGHT
+2025-04-01 01:51:00.623 - ID: 468_360_525_436 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:51:00.648 - ID: 214_169_368_373 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:00.775 - ID: 466_360_524_437 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:51:00.804 - ID: 223_167_376_373 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:00.984 - ID: 464_362_523_437 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:51:01.020 - ID: 222_167_378_373 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:01.136 - ID: 461_361_521_441 | Name: Œ ÀºÏ˜ | Status: Distracted
+2025-04-01 01:51:01.159 - ID: 220_162_378_372 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:01.264 - ID: 225_165_372_371 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:01.372 - ID: 228_165_369_366 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:01.487 - ID: 233_164_385_373 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:01.589 - ID: 236_166_387_373 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:01.692 - ID: 244_169_399_369 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:01.791 - ID: 245_168_403_370 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:01.932 - ID: 257_168_418_369 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:02.052 - ID: 264_172_429_369 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:02.167 - ID: 265_175_435_366 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:02.270 - ID: 266_171_437_370 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:02.395 - ID: 266_177_437_367 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:02.490 - ID: 266_175_428_372 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:02.608 - ID: 259_176_416_391 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:02.696 - ID: 246_202_400_395 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:02.815 - ID: 244_199_397_388 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:02.972 - ID: 237_205_393_399 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:03.086 - ID: 235_201_390_400 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:03.205 - ID: 238_195_391_401 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:03.416 - ID: 239_181_393_395 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:03.578 - ID: 240_157_388_353 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:03.693 - ID: 241_149_387_341 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:03.828 - ID: 241_146_387_339 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:04.022 - ID: 237_146_387_328 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:04.169 - ID: 237_151_386_326 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:04.277 - ID: 241_152_383_324 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:04.373 - ID: 241_158_383_331 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:04.505 - ID: 240_159_382_333 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:04.623 - ID: 237_160_380_355 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:04.755 - ID: 236_171_384_376 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:04.862 - ID: 237_176_385_385 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:05.020 - ID: 241_184_391_393 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:05.113 - ID: 240_193_392_394 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:05.216 - ID: 240_204_393_397 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:05.333 - ID: 240_204_394_398 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:05.434 - ID: 240_207_393_398 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:05.608 - ID: 239_207_394_400 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:05.729 - ID: 239_195_394_400 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:05.821 - ID: 239_180_393_392 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:05.920 - ID: 257_168_403_374 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:06.009 - ID: 264_169_407_370 | Name: Ã¿—‡ | Status: Turning LEFT
+2025-04-01 01:51:06.113 - ID: 286_162_416_360 | Name: Ã¿—‡ | Status: Turning LEFT
+2025-04-01 01:51:06.230 - ID: 290_157_420_361 | Name: Ã¿—‡ | Status: Turning LEFT
+2025-04-01 01:51:06.330 - ID: 289_157_420_362 | Name: Ã¿—‡ | Status: Turning LEFT
+2025-04-01 01:51:06.414 - ID: 291_159_420_361 | Name: Ã¿—‡ | Status: Turning LEFT
+2025-04-01 01:51:06.539 - ID: 289_165_419_365 | Name: Ã¿—‡ | Status: Turning LEFT
+2025-04-01 01:51:06.708 - ID: 285_165_418_365 | Name: Ã¿—‡ | Status: Turning LEFT
+2025-04-01 01:51:06.815 - ID: 235_165_388_380 | Name: Ã¿—‡ | Status: Turning LEFT
+2025-04-01 01:51:06.931 - ID: 218_162_371_373 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:07.054 - ID: 214_165_362_372 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:07.165 - ID: 213_165_363_373 | Name: Ã¿—‡ | Status: Distracted
+2025-04-01 01:51:07.338 - ID: 212_165_360_372 | Name: Ã¿—‡ | Status: Turning RIGHT
+2025-04-01 01:51:07.461 - ID: 214_165_361_371 | Name: Ã¿—‡ | Status: Turning RIGHT
+2025-04-01 01:51:07.567 - ID: 215_165_363_371 | Name: Ã¿—‡ | Status: Turning RIGHT
+2025-04-01 01:51:07.731 - ID: 215_165_363_372 | Name: Ã¿—‡ | Status: Turning RIGHT
+2025-04-01 01:51:07.862 - ID: 214_160_366_374 | Name: Ã¿—‡ | Status: Turning RIGHT
+2025-04-01 01:51:07.991 - ID: 215_160_367_373 | Name: Ã¿—‡ | Status: Turning RIGHT
+2025-04-01 01:51:08.088 - ID: 221_160_377_375 | Name: Ã¿—‡ | Status: Turning RIGHT
+2025-04-01 01:51:08.227 - ID: 239_171_388_382 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:08.316 - ID: 241_175_398_388 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:08.601 - ID: 243_175_399_389 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:08.700 - ID: 246_175_401_390 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:08.825 - ID: 248_174_402_390 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:08.951 - ID: 268_176_421_386 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:09.076 - ID: 274_179_427_387 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:09.212 - ID: 298_180_457_389 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:09.367 - ID: 309_180_468_389 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:09.471 - ID: 323_182_480_393 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:09.593 - ID: 337_182_498_393 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:09.703 - ID: 347_182_507_398 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:09.878 - ID: 351_183_516_398 | Name: Ã¿—‡ | Status: Head Down
+2025-04-01 01:51:10.004 - ID: 352_183_518_398 | Name: Ã¿—‡ | Status: Head Down
