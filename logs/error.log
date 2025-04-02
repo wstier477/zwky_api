@@ -1208,3 +1208,11 @@ ERROR 2025-04-01 15:29:47,296 basehttp 45668 46264 "POST /face_recognition/inser
 =======
 >>>>>>> c70743204568b7daca3fb93d4306540ef1dccafd
 >>>>>>> 1517d95b736575eeb05a16cfc45291914c2c7e4e
+ERROR 2025-04-02 09:26:19,793 middleware 51900 10624 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引

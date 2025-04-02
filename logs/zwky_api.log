@@ -2090,3 +2090,34 @@ INFO 2025-04-01 22:52:38,442 autoreload 16616 40592 Watching for file changes wi
 INFO 2025-04-01 23:07:46,564 autoreload 16616 40592 F:\AAB\AAAzwky\zwky_api\face_recognition\views.py changed, reloading.
 INFO 2025-04-01 23:07:53,075 autoreload 27920 53192 Watching for file changes with StatReloader
 INFO 2025-04-01 23:14:01,849 autoreload 32892 48108 Watching for file changes with StatReloader
+INFO 2025-04-01 23:16:55,494 autoreload 27920 53192 F:\AAB\AAAzwky\zwky_api\face_recognition\views.py changed, reloading.
+INFO 2025-04-01 23:16:55,675 autoreload 32892 48108 F:\AAB\AAAzwky\zwky_api\face_recognition\views.py changed, reloading.
+INFO 2025-04-01 23:17:01,671 autoreload 51900 52280 Watching for file changes with StatReloader
+INFO 2025-04-01 23:17:01,677 autoreload 50932 32088 Watching for file changes with StatReloader
+INFO 2025-04-02 09:26:19,788 middleware 51900 10624 请求内容类型: text/plain
+INFO 2025-04-02 09:26:19,792 middleware 51900 10624 收到请求 - 方法: GET, 路径: /, 用户: 问思祺 (教师), IP: 127.0.0.1
+ERROR 2025-04-02 09:26:19,793 middleware 51900 10624 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+INFO 2025-04-02 09:26:19,798 middleware 51900 10624 请求完成 - 路径: /, 状态码: 404, 处理时间: 0.01秒
+WARNING 2025-04-02 09:26:19,798 log 51900 10624 Not Found: /
+WARNING 2025-04-02 09:26:19,799 basehttp 51900 10624 "GET / HTTP/1.1" 404 3490
+INFO 2025-04-02 09:26:25,233 middleware 51900 23372 请求内容类型: text/plain
+INFO 2025-04-02 09:26:25,235 middleware 51900 23372 收到请求 - 方法: GET, 路径: /admin/, 用户: 问思祺 (教师), IP: 127.0.0.1
+INFO 2025-04-02 09:26:25,276 middleware 51900 23372 请求完成 - 路径: /admin/, 状态码: 200, 处理时间: 0.04秒
+INFO 2025-04-02 09:26:25,278 basehttp 51900 23372 "GET /admin/ HTTP/1.1" 200 22559
+INFO 2025-04-02 09:26:25,290 basehttp 51900 33868 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-04-02 09:26:25,290 basehttp 51900 23372 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-04-02 09:26:25,290 basehttp 51900 46176 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-04-02 09:26:25,294 basehttp 51900 46176 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-04-02 09:26:25,294 basehttp 51900 23372 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-04-02 09:26:25,295 basehttp 51900 23372 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-04-02 09:26:25,299 basehttp 51900 23372 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-04-02 09:26:25,306 basehttp 51900 46176 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-04-02 09:26:25,306 basehttp 51900 23372 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-04-02 09:26:25,306 basehttp 51900 33868 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
